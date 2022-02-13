@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: goldpinger
+  labels:
+    team: goldpinger-team
+spec:
+  selector:
+    matchLabels:
+      app: goldpinger
+  endpoints:
+  - port: http
